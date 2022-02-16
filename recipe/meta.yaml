@@ -1,6 +1,6 @@
 {% set name = "pymem3dg" %}
-{% set version = "0.0.3a3" %}
-{% set sha256 = "e8bc6a2e2b7b6ac2e8daa264e8ad5d004a914807f9c06e0e5666815347c633fc" %}
+{% set version = "0.0.4" %}
+{% set sha256 = "4e46cf8f3c2d3089882408cb1a4fe3f8c3197b99409dec2b9367bb77869ae573" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or py<35]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [win or py<35]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -55,13 +55,13 @@ about:
   home: https://github.com/RangamaniLabUCSD/Mem3DG
   license: MPL-2.0
   license_family: MOZILLA
-  license_file: 
+  license_file:
     - LICENSE
     - libraries/pcg/LICENSE-MIT.txt
     - libraries/geometry-central/LICENSE
     - libraries/polyscope/LICENSE
 
-  summary: 'Membrane Dynamics in 3D using Discrete Differential Geometry'
+  summary: Membrane Dynamics in 3D using Discrete Differential Geometry
 
   description: |
     PyMem3DG performs membrane simulations.
