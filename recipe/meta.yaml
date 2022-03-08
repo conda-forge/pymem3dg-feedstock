@@ -14,10 +14,10 @@ source:
 build:
   number: 1
   skip: True  # [win or py<35]
-  script: |
-     "export TARGET_OS_OSX=1"  # [osx]
-     "export CMAKE_GENERATOR=Ninja"
-     "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script_env:
+    - CMAKE_GENERATOR=Ninja
+    - TARGET_OS_OSX=1"  # [osx]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
