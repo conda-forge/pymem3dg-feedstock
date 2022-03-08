@@ -15,15 +15,17 @@ build:
   number: 1
   skip: True  # [win or py<35]
   script_env:
-    - CXXFLAGS="-DTARGET_OS_OSX=1"  # [osx]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+#     - CXXFLAGS="-DTARGET_OS_OSX=1"  # [osx]
+    - CMAKE_GENERATOR="Ninja"
+  script: |
+    env
+    "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - make  # [linux]
     - pybind11
     - eigen
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
