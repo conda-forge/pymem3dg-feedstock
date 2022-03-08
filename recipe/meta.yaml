@@ -15,8 +15,8 @@ build:
   number: 1
   skip: True  # [win or py<35]
   script: |
-     "TARGET_OS_OSX=1 CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv" # [osx]
-     "CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv" # [linux]
+     "TARGET_OS_OSX=1 CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv"  # [osx]
+     "CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv"  # [linux]
 
 requirements:
   build:
