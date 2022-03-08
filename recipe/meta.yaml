@@ -14,8 +14,6 @@ source:
 build:
   number: 1
   skip: True  # [win or py<35]
-  script_env:
-    - CXXFLAGS="$CXXFLAGS -DTARGET_OS_OSX=1"  # [osx]
   script:
     - env
     - "CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv"
