@@ -39,7 +39,7 @@ requirements:
     - netcdf4
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - importlib_resources  # [py<39]
 
 test:
