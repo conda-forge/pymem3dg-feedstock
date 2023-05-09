@@ -26,28 +26,19 @@ requirements:
     - ninja
     - pybind11
     - eigen
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
   host:
     - python
-    - pip
     - scikit-build
     - netcdf-cxx4
-    - xorg-libxfixes  # [linux]
-    - xorg-libx11  # [linux]
-    - xorg-libxrandr  # [linux]
-    - xorg-libxinerama  # [linux]
-    - xorg-libxcursor  # [linux]
-    - xorg-libxi  # [linux]
-    - importlib_resources  # [py<39]
   run:
     - python
     - netcdf-cxx4
-    - xorg-libx11  # [linux]
+    - polyscope
+    - seaborn
+    - netcdf4
+    - numpy
+    - scipy
+    - matplotlib
     - importlib_resources  # [py<39]
 
 test:
@@ -62,7 +53,8 @@ about:
     - LICENSE
     - libraries/pcg/LICENSE-MIT.txt
     - libraries/geometry-central/LICENSE
-    - libraries/polyscope/LICENSE
+    - libraries/libigl/LICENSE.GPL
+    - libraries/libigl/LICENSE.MPL2
 
   summary: 'Membrane Dynamics in 3D using Discrete Differential Geometry'
 
