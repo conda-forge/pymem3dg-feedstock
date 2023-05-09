@@ -28,6 +28,7 @@ requirements:
     - eigen
   host:
     - python
+    - pip
     - scikit-build
     - netcdf-cxx4
   run:
