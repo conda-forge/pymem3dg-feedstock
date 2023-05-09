@@ -1,6 +1,6 @@
 {% set name = "pymem3dg" %}
-{% set version = "0.0.5a1" %}
-{% set sha256 = "e766696b121eb2585ef52ff20263158a1c40d2559e557c18e7bbcc860dd89060" %}
+{% set version = "0.0.6rc1" %}
+{% set sha256 = "c658dbaf4ab9238462737ff6046817a85fb35e94565dff0cc8608000f2b7e5d1" %}
 
 package:
   name: {{ name|lower }}
@@ -26,28 +26,20 @@ requirements:
     - ninja
     - pybind11
     - eigen
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
   host:
     - python
     - pip
     - scikit-build
     - netcdf-cxx4
-    - xorg-libxfixes  # [linux]
-    - xorg-libx11  # [linux]
-    - xorg-libxrandr  # [linux]
-    - xorg-libxinerama  # [linux]
-    - xorg-libxcursor  # [linux]
-    - xorg-libxi  # [linux]
-    - importlib_resources  # [py<39]
   run:
     - python
     - netcdf-cxx4
-    - xorg-libx11  # [linux]
+    - polyscope
+    - seaborn
+    - netcdf4
+    - numpy
+    - scipy
+    - matplotlib-base
     - importlib_resources  # [py<39]
 
 test:
@@ -62,7 +54,8 @@ about:
     - LICENSE
     - libraries/pcg/LICENSE-MIT.txt
     - libraries/geometry-central/LICENSE
-    - libraries/polyscope/LICENSE
+    - libraries/libigl/LICENSE.GPL
+    - libraries/libigl/LICENSE.MPL2
 
   summary: 'Membrane Dynamics in 3D using Discrete Differential Geometry'
 
