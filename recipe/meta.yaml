@@ -1,6 +1,6 @@
 {% set name = "pymem3dg" %}
-{% set version = "0.0.6rc1" %}
-{% set sha256 = "c658dbaf4ab9238462737ff6046817a85fb35e94565dff0cc8608000f2b7e5d1" %}
+{% set version = "0.0.6rc2" %}
+{% set sha256 = "d991340b5bfc5fb61a219afdc4f9a3efdf2f336d57278f2e76a2fea7ced09434" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win or py<35]
   script:
     - CXXFLAGS="${CXXFLAGS} -DTARGET_OS_OSX=1"  # [osx]
