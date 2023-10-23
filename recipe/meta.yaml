@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py<35]
   script:
     - CXXFLAGS="${CXXFLAGS} -DTARGET_OS_OSX=1"  # [osx]
@@ -36,12 +36,12 @@ requirements:
   run:
     - python
     - netcdf-cxx4
-    - polyscope
-    - seaborn
-    - netcdf4
+    # - polyscope
+    # - seaborn
+    # - netcdf4
     - numpy
     - scipy
-    - matplotlib-base
+    # - matplotlib-base
     - importlib_resources  # [py<39]
 
 test:
