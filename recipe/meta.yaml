@@ -35,13 +35,13 @@ requirements:
     - netcdf-cxx4
   run:
     - python
-    - netcdf-cxx4
-    - polyscope
-    - seaborn
-    - netcdf4
+    # - netcdf-cxx4
+    # - polyscope
+    # - seaborn
+    # - netcdf4
     - numpy
     - scipy
-    - matplotlib-base
+    # - matplotlib-base
     - importlib_resources  # [py<39]
 
 test:
