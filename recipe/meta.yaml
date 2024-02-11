@@ -1,6 +1,6 @@
 {% set name = "pymem3dg" %}
-{% set version = "0.0.6rc2" %}
-{% set sha256 = "d991340b5bfc5fb61a219afdc4f9a3efdf2f336d57278f2e76a2fea7ced09434" %}
+{% set version = "0.0.6" %}
+{% set sha256 = "4ba94b213d37a87d28da51cf9321e0c04208f4a33fcd2a5fdff069108a2ddcca" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   script:
     - CXXFLAGS="${CXXFLAGS} -DTARGET_OS_OSX=1"  # [osx]
     - env
-    - "CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv"
+    - "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -31,18 +31,19 @@ requirements:
   host:
     - python
     - pip
-    - scikit-build
+    - scikit-build-core
     - netcdf-cxx4
   run:
     - python
     - netcdf-cxx4
-    # - polyscope
-    # - seaborn
-    # - netcdf4
     - numpy
     - scipy
-    # - matplotlib-base
+    - matplotlib-base
     - importlib_resources  # [py<39]
+    - netCDF4
+    - polyscope
+    - seaborn
+    - xarray
 
 test:
   imports:
