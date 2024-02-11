@@ -27,13 +27,13 @@ requirements:
     - python    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11  # [build_platform != target_platform]
-    - eigen
-    - setuptools_scm
+    - eigen 
   host:
     - python
     - pip
     - scikit-build-core
     - netcdf-cxx4
+    - setuptools_scm
   run:
     - python
     - netcdf-cxx4
