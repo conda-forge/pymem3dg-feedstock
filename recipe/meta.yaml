@@ -17,7 +17,7 @@ build:
   script:
     - CXXFLAGS="${CXXFLAGS} -DTARGET_OS_OSX=1"  # [osx]
     - env
-    - "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - "CMAKE_GENERATOR=Ninja {{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
