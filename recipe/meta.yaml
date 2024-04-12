@@ -1,6 +1,6 @@
 {% set name = "pymem3dg" %}
-{% set version = "0.0.6" %}
-{% set sha256 = "4ba94b213d37a87d28da51cf9321e0c04208f4a33fcd2a5fdff069108a2ddcca" %}
+{% set version = "0.0.7" %}
+{% set sha256 = "f49e5d4eb4f836fae50763f85ce7d7c088bd7a64ce7a8392a0501cccd9d7966b" %}
 
 package:
   name: {{ name|lower }}
@@ -72,4 +72,3 @@ extra:
   recipe-maintainers:
     - CunchengZhu
     - ctlee
-    - cuzhucuncheng
